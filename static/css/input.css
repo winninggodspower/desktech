@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: "Inter", serif;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5 {
+        @apply font-LeagueSpantan;
+    }
+}
+
+@layer components {
+    .gradient-btn{
+        @apply text-custom-white bg-gradient-to-r from-lime to-custom-blue hover:bg-gradient-to-br focus:outline-none font-bold rounded-full text-xs px-6 py-4  text-center me-2 md:text-base sm:px-9 sm:py-5;
+    }
+}

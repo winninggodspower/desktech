@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% include "components/navbar.html" %}
+
+<header class="min-h-[540px]">
+  <div class="grid grid-cols-1 md:grid-cols-[40%,auto] items-center h-full">
+    <div class="mx-4 md:ml-8 space-y-6 my-8">
+      <h1 class="font-LeagueSpantan font-medium text-6xl md:text-7xl text-dark leading-[58px] md:leading-[73px]">
+        We Are a
+        Design, Print
+        Marketing and
+        Development <span class="text-custom-blue">Agency</span>
+      </h1>
+      <p>Desk tech poses to be the number one first  and best point of contact for any design need, from learning to
+        rendering of different design services including printing and development.
+      </p>
+      <button
+        class="text-custom-white bg-[#202020] focus:outline-none font-bold rounded-full text-xs px-6 py-4 text-center me-2 md:text-base sm:px-9 sm:py-5">
+        GET STARTED
+      </button>
+    </div>
+    <div class="flex justify-end mt-10">
+      <img src="{% static 'bg-1.png' %}" alt="">
+    </div>
+  </div>
+
+  <div class="flex justify-center gap-2 my-8">
+    <div class="size-[35px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
+      <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10.6666 13L10.6666 1C10.6662 0.87851 10.6327 0.759419 10.5697 0.655553C10.5067 0.551686 10.4165 0.466976 10.3089 0.41054C10.2013 0.354104 10.0804 0.328079 9.95909 0.335268C9.83781 0.342457 9.72079 0.382586 9.62061 0.451337L0.953948 6.45134C0.594615 6.7 0.594615 7.29867 0.953948 7.548L9.62061 13.548C9.72058 13.6175 9.83766 13.6582 9.95914 13.6658C10.0806 13.6733 10.2019 13.6475 10.3097 13.591C10.4175 13.5345 10.5078 13.4496 10.5707 13.3454C10.6336 13.2412 10.6668 13.1217 10.6666 13Z"
+          fill="black" />
+      </svg>
+    </div>
+    <div class="size-[35px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
+      <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0.333386 0.999996V13C0.333767 13.1215 0.367276 13.2406 0.430305 13.3444C0.493334 13.4483 0.583496 13.533 0.691088 13.5895C0.798679 13.6459 0.919626 13.6719 1.04091 13.6647C1.16219 13.6575 1.27921 13.6174 1.37939 13.5487L10.0461 7.54866C10.4054 7.3 10.4054 6.70133 10.0461 6.452L1.37939 0.451996C1.27942 0.382546 1.16234 0.341819 1.04086 0.334239C0.919372 0.32666 0.798134 0.352519 0.690314 0.409005C0.582495 0.465492 0.492217 0.550446 0.42929 0.654639C0.366364 0.758831 0.333195 0.878276 0.333386 0.999996Z"
+          fill="black" />
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section class="relative bg-white py-24 md:py-40 max-w-screen-2xl mx-auto px-4">
+  <div class="absolute left-0 top-1/2 -translate-y-1/2 -z-">
+    <img src="../static/images/Ellipse 2.png" alt="">
+  </div>
+  <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
+    We Offer a Range of <span class="text-custom-blue">Digital Solutions</span> for your business
+  </h2>
+
+  <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-lg mx-auto mt-20 z-10">
+    {% include "components/service_card.html" with icon="icons/digital-marketing-icon.svg" title="Digital Marketing" description="Desktech provides a range of services, including digital marketing, to help businesses grow and succeed online. Our digital marketing services include strategies like: ..."%}
+
+    <div class="md:row-span-2 flex flex-col">
+      {% include "components/service_card.html" with icon="icons/design.svg" title="Design" description="We create breath taking graphic designs, product designs and UI UX designs that would make you and your business stand out"%}
+      <div class="mt-14 mb-10 md:flex justify-center hidden">
+        <button type="button" class="gradient-btn">GET STARTED</button>
+      </div>
+    </div>
+
+    {% include "components/service_card.html" with icon="icons/development-icon.svg" title="Development" description="We do not only design your apps and websites, we are also committed to bringing it to live, and doing continuous maintenance on your behalf."%}
+
+    {% include "components/service_card.html" with icon="icons/seo-icon.svg" title="Seo" description="We are experts in making you generate leads by using our search engine optimization tools, ad-sense and google analytic tool to help boost your visibility and business at large."%}
+
+    {% include "components/service_card.html" with icon="icons/training-course-icon.svg" title="Training Courses" description="We have created a platform for you to harness digital skills that can make you financially independent and also help you land your tech dream job."%}
+
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 my-28 md:my-32">
+  <div class="grid grid-cols-1 md:grid-cols-[50%,50%] gap-8 md:gap-24 items-center">
+    <!-- Image Column -->
+    <div class="relative">
+      <img src="../static/Group 109.png" alt="Person working at desk"
+        class="relative z-10 w-full h-full object-cover rounded-3xl" />
+    </div>
+
+    <!-- Content Column -->
+    <div class="space-y-6">
+      <h2 class="text-5xl md:text-6xl">
+        Learn more about
+        <span class="block text-custom-blue">Mission<br />and Vision.</span>
+      </h2>
+      <p class="text-[#202020]">
+        Desk tech poses to be the number one first and best point of contact for any design needs, from learning to
+        rendering of different design services including printing and development.
+      </p>
+      <button class="gradient-btn">
+        GET STARTED
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-[40%,60%] items-end space-y-6">
+      <h2 class="text-5xl md:text-6xl">
+        Some
+        <span class="text-custom-blue">Samples</span>
+        of Our Recent and Past
+        <span class="text-custom-blue">Project.</span>
+      </h2>
+      <p>We believe that design and digital marketing are more than services; they are the heart and soul of effective
+        communication in today’s digital world. Whether it’s crafting stunning visuals, building user-friendly websites,
+        or developing strategies that connect brands to people, we pour our hearts into everything we do.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4 mt-10 md:mt-20">
+      <a href="">
+        <img class="rounded-[10px]" src="../static/portfolio/Frame 12.png" alt="">
+      </a>
+      <a href="">
+        <img class="rounded-[10px]" src="../static/portfolio/kodlem.png" alt="">
+      </a>
+      <a href="">
+        <img class="rounded-[10px]" src="../static/portfolio/mimz.png" alt="">
+      </a>
+      <a href="">
+        <img class="rounded-[10px]" src="../static/portfolio/WhatsApp Image 2024-11-05 at 10.52.49_9d831798.png" alt="">
+      </a>
+      <a href="">
+        <img class="rounded-[10px]" src="../static/portfolio/WhatsApp Image 2024-12-19 at 08.42.35_d4b77ff0.png" alt="">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 md:py-32 flex justify-center">
+  <div
+    class="w-[550px] max-w-[70%] bg-custom-blue bg-[linear-gradient(340.38deg,#B1F20E_-49.14%,rgba(48,195,146,0.9)_123.41%)] p-8 flex flex-col justify-center relative rounded-[10px]">
+    <div class="text-white space-y-8 md:py-24 flex flex-col justify-center items-center">
+      <div class="">
+        <h3 class="text-8xl font-light leading-[0.5]">100</h3>
+        <div class="text-2xl tracking-wide text-[#F1F1F1B2]">PROJECTS</div>
+      </div>
+
+      <div class="flex gap-12">
+        <div class="">
+          <h4 class="text-5xl font-light">+20</h4>
+          <p class="text-lg tracking-wide text-[#F1F1F1]">CLIENT</p>
+        </div>
+
+        <div class="">
+          <h4 class="text-5xl font-light">100%</h4>
+          <p class="text-lg tracking-wide text-[#F1F1F1]">HAPPY CLIENT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="w-[550px] max-w-[70%] p-8 lg:p-16 flex items-center rounded-[10px] shadow-[0px_0px_20px_10px_rgba(0,0,0,0.08)] ">
+    <div class="max-w-xl space-y-8">
+      <h1 class="text-5xl">
+        We <span class="text-custom-blue">Love</span> What<br>We Do
+      </h1>
+
+      <p class="mt-8 md:mt-5">
+        Why do we do what we do? Because we believe in the power of ideas, the importance of connection, and the
+        limitless potential of digital transformation. At DESKTECH, we're not just here to work for you—we're here to
+        work with you, building something amazing together. Let's create magic. Let's make your brand unforgettable.</p>
+
+      <ul class="space-y-3">
+        <li class="flex items-center gap-2">
+          <img src="../static/icons/check.svg" alt="">
+          <span>Branding and design</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="../static/icons/check.svg" alt="">
+          <span>Printing</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="../static/icons/check.svg" alt="">
+          <span>Product and UI/UX design</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="../static/icons/check.svg" alt="">
+          <span>Design training courses</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="../static/icons/check.svg" alt="">
+          <span>Brand consultation</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <img src="../static/icons/check.svg" alt="">
+          <span>Web and App development</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto px-4 my-28 md:my-32">
+  <h2 class="text-5xl md:text-6xl text-center">
+    What our <br>
+    <span class="text-custom-blue">clients</span>
+    are saying
+  </h2>
+
+  <div class="md:animate-loop-scroll flex flex-col md:flex-row gap-y-11 gap-x-4 mt-16 md:mt-28">
+
+    <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
+      <div class="mb-2">
+        <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
+          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
+            height="100px" alt="">
+          <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
+        </div>
+      </div>
+      <h4 class="leading-[0.6] text-base">Victor Nwauwa</h4>
+      <h5 class="font-light">DIRECTOR, KODLEM</h5>
+
+      <p class="mt-3 font-LeagueSpantan font-light leading-[14px]">Best service, form design to prints to listening and
+        delivering accurate deliverables. they have been designing for me for more than 3 years and i have no regrets.
+      </p>
+    </div>
+
+    <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
+      <div class="mb-2">
+        <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
+          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
+            height="100px" alt="">
+          <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
+        </div>
+      </div>
+      <h4 class="leading-[0.6] text-base">Victor Nwauwa</h4>
+      <h5 class="font-light">DIRECTOR, KODLEM</h5>
+
+      <p class="mt-3 font-LeagueSpantan font-light leading-[14px]">Best service, form design to prints to listening and
+        delivering accurate deliverables. they have been designing for me for more than 3 years and i have no regrets.
+      </p>
+    </div>
+
+    <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
+      <div class="mb-2">
+        <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
+          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
+            height="100px" alt="">
+          <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
+        </div>
+      </div>
+      <h4 class="leading-[0.6] text-base">Victor Nwauwa</h4>
+      <h5 class="font-light">DIRECTOR, KODLEM</h5>
+
+      <p class="mt-3 font-LeagueSpantan font-light leading-[14px]">Best service, form design to prints to listening and
+        delivering accurate deliverables. they have been designing for me for more than 3 years and i have no regrets.
+      </p>
+    </div>
+
+    <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
+      <div class="mb-2">
+        <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
+          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
+            height="100px" alt="">
+          <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
+        </div>
+      </div>
+      <h4 class="leading-[0.6] text-base">Victor Nwauwa</h4>
+      <h5 class="font-light">DIRECTOR, KODLEM</h5>
+
+      <p class="mt-3 font-LeagueSpantan font-light leading-[14px]">Best service, form design to prints to listening and
+        delivering accurate deliverables. they have been designing for me for more than 3 years and i have no regrets.
+      </p>
+    </div>
+  </div>
+
+  <h4 class="text-center mt-8 md:mt-10 font-light text-[#202020] text-base md:text-3xl">We can list but  a few...</h4>
+</section>
+
+<section class="px-4 my-28 md:my-32">
+  <div class="flex flex-col md:flex-row md:gap-4 gap-12 justify-center ">
+    <div class="w-[550px] max-w-full px-3 md:px-7 pt-10 md:pt-[67px] pb-[70px] rounded-[10px] bg-[linear-gradient(360deg,#191919_40.4%,#7F7F7F_152.96%)] text-center items-center">
+      <h2 class="text-2xl md:text-3xl text-[#D9D9D9]">Are you ready?</h2>
+      <h3 class="text-3xl md:text-4xl mt-3 md:mt-5 text-[#F1F1F1]">Start a New Project</h3>
+      <div class="w-full h-16 rounded-[60px] flex bg-[#3B3B3B] mt-10 md:mt-14">
+        <input class="w-9/12 border-0 bg-transparent rounded-[60px] px-8 text-[#D9D9D9]" type="text" placeholder="Enter Your Email Address">
+        <button class="font-LeagueSpantan font-medium text-xl text-custom-white-2 me-8">SUBMIT</button>
+      </div>
+    </div>
+    <div class="w-[550px] max-w-full px-3 md:px-7 pt-10 pb-12 md:pt-[67px] md:pb-[70px] rounded-[10px] bg-[linear-gradient(340.38deg,#B1F20E_-49.14%,rgba(48,195,146,0.9)_123.41%)] text-center">
+      <h2 class="text-2xl md:text-3xll text-white">What are you waiting for?</h2>
+      <h3 class="text-3xl md:text-4xl mt-3 md:mt-5 text-[#F1F1F1]">Start a Design Course</h3>
+      <button
+        class="text-custom-white bg-[#3B3B3B] focus:outline-none font-bold rounded-full px-6 py-4 text-center me-2 sm:px-10 sm:py-5 mt-11 md:mt-16">
+        START NOW
+      </button>
+    </div>
+  </div>
+</section>
+
+{% include "components/footer.html" %}
+{% endblock content %}
