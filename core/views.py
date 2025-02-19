@@ -7,6 +7,9 @@ def home(request):
 def training(request):
     return render(request, 'training.html')
 
+def job(request):
+    return render(request, 'jobs.html')
+
 def about(request):
     return render(request, 'about.html')
 

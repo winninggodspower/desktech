@@ -17,7 +17,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        'LeagueSpantan': ['League Spartan', 'sans-serif']
+        'LeagueSpantan': ['League Spartan', 'sans-serif'],
+        'inter': ["Inter", "serif"]
       },
       animation: {
         'loop-scroll': 'loop-scroll 50s linear infinite',
