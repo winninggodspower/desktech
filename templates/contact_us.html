@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% load image_optimizer %}
+
+<title>Contact Us | Deltech</title>
+
+{% block content %}
+{% include "components/navbar.html" %}
+
+<header class="h-[490px] flex justify-center items-center relative">
+    <div class="absolute inset-0 bg-[#B1F20E80] opacity-50 z-10"></div>
+    {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/page-header.png"' 'alt="About Us Background"' 'class="absolute inset-0 w-full h-full object-cover"' %}
+    <h1 class="relative text-white text-7xl font-medium z-20">Contact Us</h1>
+</header>
+
+{% include "components/footer.html" %}
+{% endblock content %}

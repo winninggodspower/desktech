@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load image_optimizer %}
+
+<title>About Us | Deltech</title>
+
+{% block content %}
+{% include "components/navbar.html" %}
+
+<header class="h-[490px] flex justify-center items-center relative">
+    <div class="absolute inset-0 bg-[#B1F20E80] opacity-50 z-10"></div>
+    {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/page-header.png"' 'alt="About Us Background"' 'class="absolute inset-0 w-full h-full object-cover"' %}
+    <h1 class="relative text-white text-7xl font-medium z-20">About Us</h1>
+</header>
+
+<section class="mx-auto px-4 py-28 md:py-32">
+    <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-9 max-w-2xl mx-auto">
+        <img class="h-full w-[170px] max-w-full mx-auto" src="/static/images/sofia-enuch.png" alt="">
+        <p>DEESKTECH is a modern technology brand founded by Sophia Onyeka Enoch. brand started about 5 years ago and was initially called ESdesigns. Desk tech poses to be the number one first  and best point of contact for any design need, from learning to rendering of different design services including design, printing and development. We are committed to fostering creativity, enhancing skills, and enabling success by providing tailored services that meet the unique needs of businesses and individuals in the ever-evolving digital and print landscapes."
+        </p>
+    </div>
+</section>
+
+{% include "components/footer.html" %}
+{% endblock content %}
