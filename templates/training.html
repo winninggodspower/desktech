@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+{% load image_optimizer %}
+
+{% block title %}
+<title>Trainings Deltech</title>
+{% endblock title %}
+
+{% block content %}
+{% include "components/navbar.html" %}
+
+<header class="min-h-[540px] bg-custom-white">
+    <div class="grid grid-cols-1 md:grid-cols-[53%,auto] items-center h-full">
+      <div class="mx-4 md:ml-8 space-y-6 md:space-y-8 my-8 md:mt-52">
+        <h1 class="font-LeagueSpantan font-medium text-5xl md:text-7xl text-dark leading-[58px] md:leading-[73px]">
+            Learn a <span class="text-custom-blue">Digital Skill</span>,
+            Get a <span class="text-custom-blue">Remote Job</span>, 
+            Be <span class="text-custom-blue">Financially Free</span>
+        </h1>
+        <p>
+            Desk tech poses to be the number one first  and best point of contact for any design need, from learning to rendering of different design services including printing and development.
+        </p>
+        <button
+          class="text-custom-white bg-[#202020] focus:outline-none font-bold rounded-full text-xs px-6 py-4 text-center me-2 md:text-base sm:px-9 sm:py-5">
+          GET STARTED
+        </button>
+      </div>
+      <div class="flex justify-end self-start">
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/training-eclipse.png"' 'alt=""' %}
+      </div>
+    </div>
+  
+    <div class="flex justify-center gap-2 py-8">
+      <div class="size-[35px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
+        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.6666 13L10.6666 1C10.6662 0.87851 10.6327 0.759419 10.5697 0.655553C10.5067 0.551686 10.4165 0.466976 10.3089 0.41054C10.2013 0.354104 10.0804 0.328079 9.95909 0.335268C9.83781 0.342457 9.72079 0.382586 9.62061 0.451337L0.953948 6.45134C0.594615 6.7 0.594615 7.29867 0.953948 7.548L9.62061 13.548C9.72058 13.6175 9.83766 13.6582 9.95914 13.6658C10.0806 13.6733 10.2019 13.6475 10.3097 13.591C10.4175 13.5345 10.5078 13.4496 10.5707 13.3454C10.6336 13.2412 10.6668 13.1217 10.6666 13Z"
+            fill="black" />
+        </svg>
+      </div>
+      <div class="size-[35px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
+        <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.333386 0.999996V13C0.333767 13.1215 0.367276 13.2406 0.430305 13.3444C0.493334 13.4483 0.583496 13.533 0.691088 13.5895C0.798679 13.6459 0.919626 13.6719 1.04091 13.6647C1.16219 13.6575 1.27921 13.6174 1.37939 13.5487L10.0461 7.54866C10.4054 7.3 10.4054 6.70133 10.0461 6.452L1.37939 0.451996C1.27942 0.382546 1.16234 0.341819 1.04086 0.334239C0.919372 0.32666 0.798134 0.352519 0.690314 0.409005C0.582495 0.465492 0.492217 0.550446 0.42929 0.654639C0.366364 0.758831 0.333195 0.878276 0.333386 0.999996Z"
+            fill="black" />
+        </svg>
+      </div>
+    </div>
+</header>
+
+<section class="max-w-screen-xl space-y-8 mx-auto px-4 py-12 md:py-24 text-justify text-lg">
+    <p>
+        In today’s fast-paced and ever-evolving world, staying ahead requires more than just passion—it demands skills, knowledge, and adaptability. At Desktech, we understand the importance of continuous learning and have designed our digital courses to empower individuals like you to thrive in the digital age. 
+    </p>
+    <p>
+        Here at Desktech, our instructors are well experienced, well known with proven track records of success stories. Our courses like every other courses, was crafted by our instructors, these courses where crafted from their experiences, making the courses easy to assimilate and relate with.
+    </p>
+</section>
+
+<section class="max-w-screen-xl mx-auto px-4 py-11">
+    <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
+        <span class="text-custom-blue">Why</span>
+        you should <span class="text-custom-blue">study</span> with us at Desktech
+    </h2>
+
+     <!-- Cards Grid -->
+     <div class="grid grid-cols-1 md:grid-cols-[repeat(3,340px)] justify-center gap-8 mt-16">
+        <!-- Card 1 -->
+        <div class="bg-[linear-gradient(202.61deg,_#B1F20E_-39.15%,rgba(48,195,146,0.9)_65.17%)] rounded-[10px] p-12 hover:animate-float text-white">
+            <img src="static/images/svg/badge.svg" class="mx-auto mb-2" alt="">
+            <h3 class="font-LeagueSpantan text-xl font-bold text-center mb-2 leading-none">2025 UPDATED <br> COURSES</h3>
+            <p class="text-center font-light text-lg">
+                Our courses are newly crafted and updated modules to fit and serve for your new and enhanced opportunities.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[linear-gradient(202.61deg,_#B1F20E_-39.15%,rgba(48,195,146,0.9)_65.17%)] rounded-[10px] p-12 hover:animate-float text-white">
+            <img src="static/images/svg/timer.svg" class="mx-auto mb-2" alt="">
+            <h3 class="font-LeagueSpantan text-xl font-bold text-center mb-2 leading-none">FLEXIBLE TIME <br> LEARNING</h3>
+            <p class="text-center font-light text-lg">Learn at your own pace, once you enroll for the course. you can start and finish whenever you want at your spare time.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[linear-gradient(202.61deg,_#B1F20E_-39.15%,rgba(48,195,146,0.9)_65.17%)] rounded-[10px] p-12 hover:animate-float text-white">
+            <img src="static/images/svg/copy.svg" class="mx-auto mb-3" alt="">
+            <h3 class="font-LeagueSpantan text-xl font-bold text-center mb-2 leading-none">SIMPLE AND <br> CONCISE</h3>
+            <p class="text-center font-light text-lg">
+                Simple English words and short form writing and fun videos to make learning short, fun and same time educative. suitable for both children and adults.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[linear-gradient(202.61deg,_#B1F20E_-39.15%,rgba(48,195,146,0.9)_65.17%)] rounded-[10px] p-12 hover:animate-float text-white">
+            <img src="static/images/svg/money.svg" class="mx-auto mb-3" alt="">
+            <h3 class="font-LeagueSpantan text-xl font-bold text-center mb-2 leading-none">AFFORDABLE <br>PRICES</h3>
+            <p class="text-center font-light text-lg">You can enroll at any of our courses for as low as $5</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[linear-gradient(202.61deg,_#B1F20E_-39.15%,rgba(48,195,146,0.9)_65.17%)] rounded-[10px] p-12 hover:animate-float text-white">
+            <img src="static/images/svg/certificate.svg" class="mx-auto mb-3" alt="">
+            <h3 class="font-LeagueSpantan text-xl font-bold text-center mb-2 leading-none">CERTIFICATE OF <br> COMPLETION</h3>
+            <p class="text-center font-light text-lg">A certificate that shows your dedication and experience would be given to every student.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-[linear-gradient(202.61deg,_#B1F20E_-39.15%,rgba(48,195,146,0.9)_65.17%)] rounded-[10px] p-12 hover:animate-float text-white">
+            <img src="static/images/svg/community.svg" class="mx-auto mb-3" alt="">
+            <h3 class="font-LeagueSpantan text-xl font-bold text-center mb-2 leading-none">TECH JOB <br>COMMUNITY</h3>
+            <p class="text-center font-light text-lg">Our instructors have made sure to use simple English words and short form writing and fun videos to make learning short, fun and same time educative</p>
+        </div>
+    </div>
+</section>
+
+<section class="px-4 py-11 md:py-28 bg-custom-white">
+    <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
+        Our Digital <span class="text-custom-blue">Courses</span>
+    </h2>
+    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-8 md:gap-6 mt-11 md:mt-20">
+        <!-- Card 1 -->
+        <div class="max-w-[340px] bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
+            <a href="#">
+                <img class="rounded-[10px] w-full" src="{% static 'images/Group 89.png' %}" alt="" />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-medium">UI UX Design</h5>
+                </a>
+                <p class="mb-6 text-xs font-normal flex-grow">Kick start your Product design career with just one course. Learn and master how to create visually engaging and intuitive interfaces that users interact with and products that would lead to stakeholders KPI expectations.</p>
+                <a href="#" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-dark">
+                    Coming Soon
+                </a>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="max-w-[340px] bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
+            <a href="#">
+                <img class="rounded-[10px] w-full" src="{% static 'images/Group 94.png' %}" alt="" />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-medium">The ABC’s of Graphic Design</h5>
+                </a>
+                <p class="mb-6 text-xs font-normal flex-grow">This course provides a comprehensive understanding of the principles and purpose behind design in the graphic world. You’ll gain the knowledge and skills needed to kickstart your journey, grow as a designer, and master the foundations of exceptional design all within this single course.</p>
+                <a href="#" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-gradient">
+                    ENROL NOW!
+                </a>
+            </div>
+        </div>
+
+         <!-- Card 3 -->
+         <div class="max-w-[340px] bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
+            <a href="#">
+                <img class="rounded-[10px] w-full" src="{% static 'images/Mask group.png' %}" alt="" />
+            </a>
+            <div class="p-6 flex flex-col flex-grow">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-medium">Digital Marketing</h5>
+                </a>
+                <p class="mb-6 text-xs font-normal flex-grow">Learn how to Market your business online, use google analytics, create the rights ads, how to write contents and captions, how to know your target audience and understand how cross platform social media algorithm works.</p>
+                <a href="#" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-dark">
+                    Coming Soon
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section class="px-4 pt-20 pb-14 md:pb-24 md:pt-52 max-w-screen-xl mx-auto">
+    <div class="max-w-[800px]">
+        <h2 class="text-5xl md:text-6xl md:leading-[60px]">
+            Check Out<span class="text-custom-blue">Tech Striped Naked </span>
+            for Aspiring Techies
+        </h2>
+        <p class="mt-4 md:mt-6">Start your tech journey with the groundbreaking book, Tech Stripped Naked! Have you ever wondered how to make a career in tech, or been challenged on your current path? Tech Stripped Naked is an eye-opening guide that will provide you with the knowledge and confidence to succeed.</p>
+    </div>
+    <p class="mt-5 text-xl font-bold">
+        <span class="text-[#FF0000]">AVAILABLE ON:</span> 
+        <a class="underline text-custom-blue" href="https://www.amazon.com/Tech-Stripped-Naked-Start-thrive/dp/B0C87M66KF">Amazon</a> and 
+        <a class="underline text-custom-blue" href="https://selar.com/m/Sowfeeyah">Selar</a>
+    </p>
+</section>
+
+<section class="pb-20 md:pb-64 ">
+    <img class="w-full" src="{% static 'images/tech-striped-naked.jpg' %}" alt="">
+</section>
+
+{% include "components/footer.html" %}
+{% endblock content %}

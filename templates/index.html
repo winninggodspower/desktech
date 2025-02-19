@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
+{% load image_optimizer %}
 
 {% block content %}
 {% include "components/navbar.html" %}
 
-<header class="min-h-[540px]">
+<header class="min-h-[540px] bg-custom-white">
   <div class="grid grid-cols-1 md:grid-cols-[40%,auto] items-center h-full">
     <div class="mx-4 md:ml-8 space-y-6 my-8">
-      <h1 class="font-LeagueSpantan font-medium text-6xl md:text-7xl text-dark leading-[58px] md:leading-[73px]">
+      <h1 class="font-LeagueSpantan font-medium text-5xl md:text-7xl text-dark md:leading-[73px]">
         We Are a
         Design, Print
         Marketing and
@@ -22,11 +23,11 @@
       </button>
     </div>
     <div class="flex justify-end mt-10">
-      <img src="{% static 'bg-1.png' %}" alt="">
+      {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="bg-1.png"' 'alt=""' %}
     </div>
   </div>
 
-  <div class="flex justify-center gap-2 my-8">
+  <div class="flex justify-center gap-2 py-8">
     <div class="size-[35px] bg-[#D9D9D9] rounded-full flex items-center justify-center">
       <svg width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -46,7 +47,7 @@
 
 <section class="relative bg-white py-24 md:py-40 max-w-screen-2xl mx-auto px-4">
   <div class="absolute left-0 top-1/2 -translate-y-1/2 -z-">
-    <img src="../static/images/Ellipse 2.png" alt="">
+    {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/Ellipse 2.png"' 'alt=""' %}
   </div>
   <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
     We Offer a Range of <span class="text-custom-blue">Digital Solutions</span> for your business
@@ -66,17 +67,16 @@
 
     {% include "components/service_card.html" with icon="icons/seo-icon.svg" title="Seo" description="We are experts in making you generate leads by using our search engine optimization tools, ad-sense and google analytic tool to help boost your visibility and business at large."%}
 
-    {% include "components/service_card.html" with icon="icons/training-course-icon.svg" title="Training Courses" description="We have created a platform for you to harness digital skills that can make you financially independent and also help you land your tech dream job."%}
+    {% include "components/service_card.html" with icon="icons/training-course-icon.svg" url="/training" title="Training Courses" description="We have created a platform for you to harness digital skills that can make you financially independent and also help you land your tech dream job."%}
 
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 my-28 md:my-32">
+<section class="max-w-7xl mx-auto px-4 my-28 md:py-32 bg-custom-white">
   <div class="grid grid-cols-1 md:grid-cols-[50%,50%] gap-8 md:gap-24 items-center">
     <!-- Image Column -->
     <div class="relative">
-      <img src="../static/Group 109.png" alt="Person working at desk"
-        class="relative z-10 w-full h-full object-cover rounded-3xl" />
+      {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="Group 109.png"' 'alt="Person working at desk"' 'class="relative z-10 w-full h-full object-cover rounded-3xl"' %}
     </div>
 
     <!-- Content Column -->
@@ -96,7 +96,7 @@
   </div>
 </section>
 
-<section class="py-24 md:py-32 bg-white">
+<section class="py-24 md:py-32">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-[40%,60%] items-end space-y-6">
       <h2 class="text-5xl md:text-6xl">
@@ -111,86 +111,88 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4 mt-10 md:mt-20">
       <a href="">
-        <img class="rounded-[10px]" src="../static/portfolio/Frame 12.png" alt="">
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="portfolio/Frame 12.png"' 'alt=""' 'class="rounded-[10px]"' %}
       </a>
       <a href="">
-        <img class="rounded-[10px]" src="../static/portfolio/kodlem.png" alt="">
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="portfolio/kodlem.png"' 'alt=""' 'class="rounded-[10px]"' %}
       </a>
       <a href="">
-        <img class="rounded-[10px]" src="../static/portfolio/mimz.png" alt="">
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="portfolio/mimz.png"' 'alt=""' 'class="rounded-[10px]"' %}
       </a>
       <a href="">
-        <img class="rounded-[10px]" src="../static/portfolio/WhatsApp Image 2024-11-05 at 10.52.49_9d831798.png" alt="">
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="portfolio/WhatsApp Image 2024-11-05 at 10.52.49_9d831798.png"' 'alt=""' 'class="rounded-[10px]"' %}
       </a>
       <a href="">
-        <img class="rounded-[10px]" src="../static/portfolio/WhatsApp Image 2024-12-19 at 08.42.35_d4b77ff0.png" alt="">
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="portfolio/WhatsApp Image 2024-12-19 at 08.42.35_d4b77ff0.png"' 'alt=""' 'class="rounded-[10px]"' %}
       </a>
     </div>
   </div>
 </section>
 
-<section class="flex justify-center items-center h-[200vh] md:h-[calc(100vh+150px)]">
-  <div class="relative w-full h-full flex justify-center items-center">
-    <div
-      class="absolute top-0 right-[30%] md:right-[46%] w-[550px] max-w-[70%] bg-custom-blue bg-[linear-gradient(340.38deg,#B1F20E_-49.14%,rgba(48,195,146,0.9)_123.41%)] p-8 flex flex-col justify-center rounded-[10px]">
-      <div class="text-white space-y-8 md:py-24 flex flex-col justify-center items-center">
-        <div class="">
-          <h3 class="text-8xl font-light leading-[0.5]">100</h3>
-          <div class="text-2xl tracking-wide text-[#F1F1F1B2]">PROJECTS</div>
-        </div>
-
-        <div class="flex gap-12">
+<section class="h-fit pt-28">
+  <div class="h-[200vh] md:h-[calc(100vh+150px)] flex justify-center items-center justify-items-center">
+    <div class="relative w-full h-full flex justify-center items-center">
+      <div
+        class="absolute top-0 right-[30%] md:right-[46%] w-[550px] max-w-[70%] bg-custom-blue bg-[linear-gradient(340.38deg,#B1F20E_-49.14%,rgba(48,195,146,0.9)_123.41%)] p-8 flex flex-col justify-center rounded-[10px]">
+        <div class="text-white space-y-8 md:py-24 flex flex-col justify-center items-center">
           <div class="">
-            <h4 class="text-5xl font-light">+20</h4>
-            <p class="text-lg tracking-wide text-[#F1F1F1]">CLIENT</p>
+            <h3 class="text-8xl font-light leading-[0.5]">100</h3>
+            <div class="text-2xl tracking-wide text-[#F1F1F1B2]">PROJECTS</div>
           </div>
-
-          <div class="">
-            <h4 class="text-5xl font-light">100%</h4>
-            <p class="text-lg tracking-wide text-[#F1F1F1]">HAPPY CLIENT</p>
+  
+          <div class="flex gap-12">
+            <div class="">
+              <h4 class="text-5xl font-light">+20</h4>
+              <p class="text-lg tracking-wide text-[#F1F1F1]">CLIENT</p>
+            </div>
+  
+            <div class="">
+              <h4 class="text-5xl font-light">100%</h4>
+              <p class="text-lg tracking-wide text-[#F1F1F1]">HAPPY CLIENT</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <div
-      class="absolute left-[30%] md:left-[46%] top-[200px] md:top-[150px] w-[550px] max-w-[70%] bg-white p-8 lg:p-16 flex items-center rounded-[10px] shadow-[0px_0px_20px_10px_rgba(0,0,0,0.08)]">
-      <div class="max-w-xl space-y-4">
-        <h1 class="text-5xl">
-          We <span class="text-custom-blue">Love</span> What<br>We Do
-        </h1>
-
-        <p class="mt-8 md:mt-5">
-          Why do we do what we do? Because we believe in the power of ideas, the importance of connection, and the
-          limitless potential of digital transformation. At DESKTECH, we're not just here to work for you—we're here to
-          work with you, building something amazing together. Let's create magic. Let's make your brand unforgettable.</p>
-
-        <ul class="">
-          <li class="flex items-center gap-2">
-            <img src="../static/icons/check.svg" alt="">
-            <span>Branding and design</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <img src="../static/icons/check.svg" alt="">
-            <span>Printing</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <img src="../static/icons/check.svg" alt="">
-            <span>Product and UI/UX design</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <img src="../static/icons/check.svg" alt="">
-            <span>Design training courses</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <img src="../static/icons/check.svg" alt="">
-            <span>Brand consultation</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <img src="../static/icons/check.svg" alt="">
-            <span>Web and App development</span>
-          </li>
-        </ul>
+  
+      <div
+        class="absolute left-[30%] md:left-[46%] top-[200px] md:top-[150px] w-[550px] max-w-[70%] bg-white p-8 lg:p-16 flex items-center rounded-[10px] shadow-[0px_0px_20px_10px_rgba(0,0,0,0.08)]">
+        <div class="max-w-xl space-y-4">
+          <h1 class="text-5xl">
+            We <span class="text-custom-blue">Love</span> What<br>We Do
+          </h1>
+  
+          <p class="mt-8 md:mt-5">
+            Why do we do what we do? Because we believe in the power of ideas, the importance of connection, and the
+            limitless potential of digital transformation. At DESKTECH, we're not just here to work for you—we're here to
+            work with you, building something amazing together. Let's create magic. Let's make your brand unforgettable.</p>
+  
+          <ul class="">
+            <li class="flex items-center gap-2">
+              <img src="../static/icons/check.svg" alt="">
+              <span>Branding and design</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <img src="../static/icons/check.svg" alt="">
+              <span>Printing</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <img src="../static/icons/check.svg" alt="">
+              <span>Product and UI/UX design</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <img src="../static/icons/check.svg" alt="">
+              <span>Design training courses</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <img src="../static/icons/check.svg" alt="">
+              <span>Brand consultation</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <img src="../static/icons/check.svg" alt="">
+              <span>Web and App development</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -209,8 +211,7 @@
     <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
       <div class="mb-2">
         <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
-          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
-            height="100px" alt="">
+          {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/profile.png"' 'alt=""' 'class="relative rounded-full mx-auto z-10 -top-2"' %}
           <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
         </div>
       </div>
@@ -225,8 +226,7 @@
     <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
       <div class="mb-2">
         <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
-          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
-            height="100px" alt="">
+          {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/profile.png"' 'alt=""' 'class="relative rounded-full mx-auto z-10 -top-2"' %}
           <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
         </div>
       </div>
@@ -241,8 +241,7 @@
     <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
       <div class="mb-2">
         <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
-          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
-            height="100px" alt="">
+          {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/profile.png"' 'alt=""' 'class="relative rounded-full mx-auto z-10 -top-2"' %}
           <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
         </div>
       </div>
@@ -257,8 +256,7 @@
     <div class="rounded-[10px] shadow-[0px_0px_8px_2px_rgba(0,0,0,0.25)] p-7 w-full max-w-[340px] text-center">
       <div class="mb-2">
         <div class="relative w-[100px] h-[100px] mx-auto rounded-full">
-          <img class="relative rounded-full mx-auto z-10 -top-2" src="../static/images/profile.png" width="100%"
-            height="100px" alt="">
+          {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/profile.png"' 'alt=""' 'class="relative rounded-full mx-auto z-10 -top-2"' %}
           <div class="absolute bg-[#B1F20E] w-full h-full top-0 z-0 rounded-full"></div>
         </div>
       </div>
