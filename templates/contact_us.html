@@ -13,5 +13,22 @@
     <h1 class="relative text-white text-7xl font-medium z-20">Contact Us</h1>
 </header>
 
+<section class="mx-auto px-4 my-28 md:my-32">
+    <h2 class="text-5xl md:text-6xl text-center">
+        Drop a <span class="text-custom-blue">Mail</span>
+    </h2>
+
+    <div class="max-w-3xl mx-auto space-y-10">
+        <input type="email" 
+            class="w-full ps-11 pe-4 py-3 mt-6 border-2 border-custom-blue rounded-[10px]" 
+            placeholder="Enter email address..."
+        >
+        <textarea 
+            class="w-full ps-11 pe-4 py-3 mt-6 border-2 border-custom-blue rounded-[10px]" 
+            name="" id="" placeholder="Write your message....." cols="30" rows="10">
+        </textarea>
+    </div>
+</section>
+
 {% include "components/footer.html" %}
 {% endblock content %}
