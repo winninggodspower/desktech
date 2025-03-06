@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="w-[340px] max-w-full bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
+    <a href="{{ url }}">
+        <img class="rounded-[10px] w-full" src="{% static image_src %}" alt="{{ image_alt }}" />
+    </a>
+    <div class="p-6 flex flex-col flex-grow">
+        <a href="{{ url }}">
+            <h5 class="mb-2 text-2xl font-medium">{{ title }}</h5>
+        </a>
+        <p class="mb-6 text-xs font-normal flex-grow">{{ description }}</p>
+        <a href="{{ url }}" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-dark">
+            {{ button_text }}
+        </a>
+    </div>
+</div>

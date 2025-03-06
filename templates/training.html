@@ -117,56 +117,16 @@
     <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
         Our Digital <span class="text-custom-blue">Courses</span>
     </h2>
-    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row gap-8 md:gap-6 mt-11 md:mt-20">
-        <!-- Card 1 -->
-        <div class="max-w-[340px] bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
-            <a href="#">
-                <img class="rounded-[10px] w-full" src="{% static 'images/Group 89.png' %}" alt="" />
-            </a>
-            <div class="p-6 flex flex-col flex-grow">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-medium">UI UX Design</h5>
-                </a>
-                <p class="mb-6 text-xs font-normal flex-grow">Kick start your Product design career with just one course. Learn and master how to create visually engaging and intuitive interfaces that users interact with and products that would lead to stakeholders KPI expectations.</p>
-                <a href="#" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-dark">
-                    Coming Soon
-                </a>
-            </div>
-        </div>
-    
-        <!-- Card 2 -->
-        <div class="max-w-[340px] bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
-            <a href="#">
-                <img class="rounded-[10px] w-full" src="{% static 'images/Group 94.png' %}" alt="" />
-            </a>
-            <div class="p-6 flex flex-col flex-grow">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-medium">The ABC’s of Graphic Design</h5>
-                </a>
-                <p class="mb-6 text-xs font-normal flex-grow">This course provides a comprehensive understanding of the principles and purpose behind design in the graphic world. You’ll gain the knowledge and skills needed to kickstart your journey, grow as a designer, and master the foundations of exceptional design all within this single course.</p>
-                <a href="#" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-gradient">
-                    ENROL NOW!
-                </a>
-            </div>
-        </div>
-
-         <!-- Card 3 -->
-         <div class="max-w-[340px] bg-white rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] flex flex-col">
-            <a href="#">
-                <img class="rounded-[10px] w-full" src="{% static 'images/Mask group.png' %}" alt="" />
-            </a>
-            <div class="p-6 flex flex-col flex-grow">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-medium">Digital Marketing</h5>
-                </a>
-                <p class="mb-6 text-xs font-normal flex-grow">Learn how to Market your business online, use google analytics, create the rights ads, how to write contents and captions, how to know your target audience and understand how cross platform social media algorithm works.</p>
-                <a href="#" class="inline-block w-full rounded-[10px] py-4 font-bold text-xl text-center text-white bg-custom-dark">
-                    Coming Soon
-                </a>
-            </div>
-        </div>
+    <div class="max-w-screen-xl mx-auto mt-11 md:mt-20 overflow-x-auto scrollbar-hide">
+        <div class="flex basis-[340px] flex-nowrap gap-8 md:gap-6 pb-10 justify-center overflow-visible">
+            {% include "components/course_card.html" with url="#" image_src="images/Group 89.png" image_alt="UI UX Design" title="UI UX Design" description="Kick start your Product design career with just one course. Learn and master how to create visually engaging and intuitive interfaces that users interact with and products that would lead to stakeholders KPI expectations." button_text="Coming Soon" %}
+            {% include "components/course_card.html" with url="#" image_src="images/Group 94.png" image_alt="The ABC’s of Graphic Design" title="The ABC’s of Graphic Design" description="This course provides a comprehensive understanding of the principles and purpose behind design in the graphic world. You’ll gain the knowledge and skills needed to kickstart your journey, grow as a designer, and master the foundations of exceptional design all within this single course." button_text="ENROL NOW!" %}
+            {% include "components/course_card.html" with url="#" image_src="images/Mask group.png" image_alt="Digital Marketing" title="Digital Marketing" description="Learn how to Market your business online, use google analytics, create the rights ads, how to write contents and captions, how to know your target audience and understand how cross platform social media algorithm works." button_text="Coming Soon" %}
+            {% include "components/course_card.html" with url="#" image_src="images/excel-admin.jpg" image_alt="Digital Marketing" title="Digital Marketing" description="Learn how to Market your business online, use google analytics, create the rights ads, how to write contents and captions, how to know your target audience and understand how cross platform social media algorithm works." button_text="Coming Soon" %}
+            {% include "components/course_card.html" with url="#" image_src="images/saas-product.jpg" image_alt="Digital Marketing" title="Digital Marketing" description="Learn how to Market your business online, use google analytics, create the rights ads, how to write contents and captions, how to know your target audience and understand how cross platform social media algorithm works." button_text="Coming Soon" %}
+            {% include "components/course_card.html" with url="#" image_src="images/project-management.jpg" image_alt="Digital Marketing" title="Digital Marketing" description="Learn how to Market your business online, use google analytics, create the rights ads, how to write contents and captions, how to know your target audience and understand how cross platform social media algorithm works." button_text="Coming Soon" %}
     </div>
-    
+</div>
 </section>
 
 <section class="px-4 pt-20 pb-14 md:pb-24 md:pt-52 max-w-screen-xl mx-auto">
