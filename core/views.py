@@ -15,3 +15,10 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact_us.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+
+def signup(request):
+    return render(request, 'signup.html')

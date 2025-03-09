@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Login | Deltech</title>
+{% endblock title %}
+
+{% block content %}
+<div class="h-screen">
+    <div class="grid md:grid-cols-2 h-full">
+        <!-- Left side with image and logo -->
+        <div class="hidden md:block relative">
+            <img src="/placeholder.svg?height=800&width=600" alt="Woman using smartphone" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <svg width="465" height="71" viewBox="0 0 465 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 69.2195V0.93396H10.0278V69.2195H0ZM9.34716 69.2195V60.0775H16.5793C23.6171 60.0775 28.9166 58.077 32.4659 54.0638C36.0151 50.0506 37.7897 44.0489 37.7897 36.0346C37.7897 27.3413 36.0151 20.8425 32.4659 16.5383C28.9166 12.2219 23.6171 10.0759 16.5793 10.0759H9.54165L8.38691 0.93396H16.5793C37.4737 0.93396 47.9148 12.6342 47.9148 36.0346C47.9148 58.1498 37.4737 69.2195 16.5793 69.2195H9.34716Z" fill="#B1F20E"/>
+                        <path d="M58.8054 69.2195V0.93396H68.8333V69.2195H58.8054ZM58.8054 10.0759V0.93396H104.119V10.0759H58.8054ZM58.8054 39.5991V30.4572H95.4526V39.5991H58.8054ZM58.8054 69.2195V60.0775H104.119V69.2195H58.8054Z" fill="#B1F20E"/>
+                        <path d="M135.503 70.1892C131.614 70.1892 127.98 69.874 124.588 69.2556C121.197 68.6251 118.061 67.6915 115.168 66.4427L116.42 56.7309C119.957 58.2344 123.373 59.3862 126.667 60.1743C129.961 60.9624 133.17 61.3504 136.281 61.3504C140.779 61.3504 144.121 60.5623 146.309 58.9982C148.497 57.4341 149.591 55.0456 149.591 51.8326C149.591 47.7588 147.5 44.7761 143.319 42.8847L131.456 37.5014C126.8 35.3796 123.215 32.8334 120.723 29.8508C118.231 26.8681 116.991 23.1702 116.991 18.7447C116.991 12.7794 118.79 8.15992 122.388 4.89842C125.986 1.62479 131.079 0.00012207 137.667 0.00012207C142.262 0.00012207 146.321 0.666952 149.858 2.0249C153.396 3.37073 156.799 5.56527 160.081 8.60853L153.335 15.4347C150.503 13.131 147.865 11.4579 145.41 10.4152C142.954 9.37244 140.39 8.85104 137.716 8.85104C134.409 8.85104 131.845 9.65128 130.022 11.2275C128.198 12.8037 127.299 15.168 127.299 18.2718C127.299 20.4785 127.894 22.2851 129.086 23.6794C130.277 25.0737 132.027 26.3104 134.337 27.4016L144.364 32.1181C149.445 34.4945 153.298 37.174 155.936 40.1445C158.574 43.115 159.886 46.9586 159.886 51.6387C159.886 57.8222 157.869 62.4659 153.833 65.5576C149.798 68.6494 143.708 70.1892 135.503 70.1892Z" fill="#B1F20E"/>
+                        <path d="M174.022 69.2195V0.93396H184.05V69.2195H174.022ZM180.1 47.4922L180.963 37.9745C185.91 37.9745 190.189 36.9439 193.786 34.8706C197.384 32.7973 200.35 30.0086 202.684 26.5046C205.018 22.9885 206.744 19.0359 207.886 14.6226C209.029 10.2213 209.6 5.65043 209.6 0.946096H219.531C219.531 7.00838 218.643 12.8281 216.881 18.4054C215.118 23.9827 212.541 28.9659 209.162 33.3307C205.783 37.6956 201.663 41.1632 196.776 43.6972C191.902 46.2191 186.335 47.4922 180.1 47.4922ZM211.144 69.2195L193.786 35.9376L202.465 31.0392L222.812 69.2195H211.144Z" fill="#B1F20E"/>
+                        <path d="M250.258 6.19393H227.055V1.27136H278.981V6.19393H255.68V70.1995H250.246V6.19393H250.258Z" fill="#30C392"/>
+                        <path d="M329.825 36.3356H294.575V65.289H333.179L332.389 70.2116H289.251V1.27136H331.599V6.19393H294.575V31.4009H329.825V36.3356Z" fill="#30C392"/>
+                        <path d="M398.938 51.7947C395.681 62.7311 387.585 71 372.975 71C353.126 71 342.673 55.2381 342.673 35.8388C342.673 17.2276 352.944 0.289551 373.084 0.289551C387.986 0.289551 396.775 8.55852 399.048 20.089H393.711C390.551 11.1289 384.729 5.22426 372.781 5.22426C355.606 5.22426 348.398 20.8771 348.398 35.7539C348.398 50.5216 355.508 66.0896 373.182 66.0896C384.437 66.0896 390.162 60.2819 393.614 51.8068H398.938V51.7947Z" fill="#30C392"/>
+                        <path d="M412.868 1.27136H418.204V31.3039H459.664V1.27136H465V70.2116H459.664V36.2386H418.204V70.2116H412.868V1.27136Z" fill="#30C392"/>
+                    </svg>                               
+                </a>
+            </div>
+        </div>
+
+        <!-- Right side with login form -->
+        <div class="bg-[linear-gradient(202.61deg,#B1F20E_-39.15%,rgba(48,195,146,0.9)65.17%)] flex flex-col justify-center items-center p-8">
+            <div class="w-full max-w-lg text-white">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="font-inter text-xl font-bold">Sign in</h2>
+                    <a href="{% url "signup" %}" class=" hover:underline text-lg opacity-70">Create an Account</a>
+                </div>
+
+                <form class="text-white" autocomplete="off">
+                    <!-- Email input -->
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 18C4 16.9391 4.42143 15.9217 5.17157 15.1716C5.92172 14.4214 6.93913 14 8 14H16C17.0609 14 18.0783 14.4214 18.8284 15.1716C19.5786 15.9217 20 16.9391 20 18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                                <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="white" stroke-width="1.5"/>
+                            </svg>                                
+                        </div>
+                        <input type="email" placeholder="Email Address" autocomplete="off"  class="w-full pl-10 pr-4 placeholder:text-white/70 py-[13px] bg-transparent border-white rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="relative mt-7">
+                        <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_264_44)">
+                                <path d="M4.5 12.75C4.89782 12.75 5.27936 12.592 5.56066 12.3107C5.84196 12.0294 6 11.6478 6 11.25C6 10.8522 5.84196 10.4706 5.56066 10.1893C5.27936 9.90804 4.89782 9.75 4.5 9.75C4.10218 9.75 3.72064 9.90804 3.43934 10.1893C3.15804 10.4706 3 10.8522 3 11.25C3 11.6478 3.15804 12.0294 3.43934 12.3107C3.72064 12.592 4.10218 12.75 4.5 12.75Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.74993 4.5C9.08993 4.5 11.1599 5.691 12.3749 7.5H20.2649C20.5007 7.49992 20.7332 7.55543 20.9435 7.66203C21.1538 7.76862 21.3361 7.92329 21.4754 8.1135L23.7104 11.1735C23.8907 11.4172 23.9921 11.7102 24.0009 12.0132C24.0098 12.3162 23.9257 12.6147 23.7599 12.8685L21.8699 15.7935C21.7609 15.9626 21.6188 16.1079 21.4522 16.2208C21.2856 16.3337 21.098 16.4118 20.9005 16.4505C20.703 16.4891 20.4998 16.4875 20.3029 16.4458C20.1061 16.404 19.9197 16.323 19.7549 16.2075L18.0299 15L16.2449 16.218C15.9953 16.3889 15.6999 16.4804 15.3974 16.4804C15.0949 16.4804 14.7995 16.3889 14.5499 16.218L12.7649 15H12.3779C11.1659 16.815 9.10793 18 6.75293 18C4.96272 18 3.24583 17.2888 1.97996 16.023C0.714088 14.7571 0.00292969 13.0402 0.00292969 11.25C0.00292969 9.45979 0.714088 7.7429 1.97996 6.47703C3.24583 5.21116 4.96272 4.5 6.75293 4.5H6.74993ZM12.3749 13.5C12.1282 13.4998 11.8852 13.5605 11.6675 13.6766C11.4498 13.7928 11.2641 13.9609 11.1269 14.166C10.6481 14.8851 9.99913 15.4749 9.2377 15.8831C8.47627 16.2913 7.62587 16.5052 6.76193 16.506C3.86693 16.506 1.51193 14.151 1.51193 11.256C1.51193 8.361 3.86693 6.006 6.76193 6.006C8.57693 6.006 10.1819 6.93 11.1269 8.346C11.4059 8.7615 11.8739 9.012 12.3749 9.012H20.2649L22.4999 12.072L20.6099 14.997L18.8849 13.7895C18.6346 13.6142 18.3367 13.5196 18.0311 13.5182C17.7255 13.5169 17.4268 13.6089 17.1749 13.782L15.3899 15L13.6049 13.782C13.3549 13.6108 13.0589 13.5192 12.7559 13.5195H12.3689L12.3749 13.5Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_264_44">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>                                
+                        </div>
+                        <input type="password" placeholder="Password" class="w-full pl-10 pr-10 placeholder:text-white/70 py-[13px] bg-transparent border-white rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+                        <div class="absolute inset-y-0 right-3 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 cursor-pointer" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Remember me and forgot password -->
+                    <div class="flex justify-between items-center mt-5">
+                        <label class="flex items-center text-lg">
+                            <input type="checkbox" class="mr-2 h-4 w-4 rounded border-white border-2 bg-transparent text-green-600 focus:ring-green-500">
+                            Remember Me
+                        </label>
+                        <a href="#" class="text-white/70 hover:underline">Forgot Password?</a>
+                    </div>
+
+                    <!-- Sign in button -->
+                    <button type="submit" class="w-full mt-7 text-xl bg-white text-custom-blue py-3 rounded-[10px] font-medium hover:bg-green-50 transition-colors">
+                        Sign in
+                    </button>
+                </form>
+
+                <!-- Terms and privacy -->
+                <div class="text-center mt-6">
+                    <p class="text-white text-xs">
+                        Terms of Service and Privacy Policy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
