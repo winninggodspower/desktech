@@ -139,7 +139,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "../../desktech.pro/static")
+STATIC_ROOT = os.path.join(BASE_DIR, env('STATIC_ROOT'))
 OPTIMIZE_IMAGE_ROOT = os.path.join(BASE_DIR, 'static', 'images')
 
 # Default primary key field type
