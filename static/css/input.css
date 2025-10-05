@@ -18,4 +18,16 @@
     .gradient-btn{
         @apply text-custom-white bg-gradient-to-r from-lime to-custom-blue hover:bg-gradient-to-br focus:outline-none font-bold rounded-full text-xs px-6 py-4  text-center me-2 md:text-base sm:px-9 sm:py-5;
     }
+
+    .animation-paused {
+        animation-play-state: paused;
+    }
+}
+
+.input-field {
+    @apply appearance-none w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-900 text-sm leading-5 transition duration-200;
+}
+
+.input-field:focus {
+    @apply outline-none border-indigo-500 ring-2 ring-indigo-500/50;
 }

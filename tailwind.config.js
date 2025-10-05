@@ -21,13 +21,13 @@ module.exports = {
         'inter': ["Inter", "serif"]
       },
       animation: {
-        'loop-scroll': 'loop-scroll 50s linear infinite',
+        'infinite-scroll': 'infinite-scroll 30s linear infinite ',
         "float": "float 2s ease-in-out infinite"
       },
       keyframes: {
-        'loop-scroll': {
+        'infinite-scroll': {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
         'float': {
           "0%": { transform: " translateY(0px)" },

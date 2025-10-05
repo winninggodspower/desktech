@@ -1,0 +1,15 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [ main ]  # or your preferred branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Trigger Django deploy endpoint
+      run: |
+        curl -X POST ${{secrets.SITE_URL}}/deploy/ \
+          -H "X-Deploy-Token: ${{ secrets.DEPLOY_SECRET }}"
