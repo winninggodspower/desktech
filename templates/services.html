@@ -3,22 +3,21 @@
 {% load image_optimizer %}
 
 {% block title %}
-<title>Trainings Deltech</title>
+<title>Services we offer | Deltech</title>
 {% endblock title %}
 
 {% block content %}
 {% include "components/navbar.html" %}
 
-<header class="min-h-[540px] bg-custom-white">
+<header class="min-h-[540px] bg-[#F1F1F1]">
     <div class="grid grid-cols-1 md:grid-cols-[53%,auto] items-center h-full">
       <div class="mx-4 md:ml-8 space-y-6 md:space-y-8 my-8 md:mt-52">
         <h1 class="font-LeagueSpantan font-medium text-5xl md:text-[80px] text-dark leading-[58px] md:leading-[73px]">
-            Learn a <span class="text-custom-blue">Digital Skill</span>,
-            Get a <span class="text-custom-blue">Remote Job</span>, 
-            Be <span class="text-custom-blue">Financially Free</span>
+            We Make Your Brand Shine Online Through Tried and Tested  
+            <span class="text-custom-blue">Digital Marketing Strategies.</span>
         </h1>
         <p>
-            Desk tech poses to be the number one first  and best point of contact for any design need, from learning to rendering of different design services including printing and development.
+            We offer digital marketing services that help businesses grow online, reach the right audience, and turn clicks into loyal customers.
         </p>
         <button
           class="text-custom-white bg-[#202020] focus:outline-none font-bold rounded-full text-xs px-6 py-4 text-center me-2 md:text-base sm:px-9 sm:py-5">
@@ -26,7 +25,7 @@
         </button>
       </div>
       <div class="flex justify-end self-start">
-        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/training-eclipse.png"' 'alt=""' %}
+        {% optimized_image 'loading="lazy"' 'decoding="async"' 'src="images/services-eclipse.png"' 'alt=""' %}
       </div>
     </div>
   
@@ -50,17 +49,33 @@
 
 <section class="max-w-screen-xl space-y-8 mx-auto px-4 py-12 md:py-24 text-justify text-lg">
     <p>
-        In today’s fast-paced and ever-evolving world, staying ahead requires more than just passion—it demands skills, knowledge, and adaptability. At Desktech, we understand the importance of continuous learning and have designed our digital courses to empower individuals like you to thrive in the digital age. 
+        In today’s fast-paced and ever-evolving world, staying ahead requires more than just passion, it demands skills, knowledge, and adaptability. At Desktech, we understand the importance of continuous learning and have designed our digital courses to empower individuals like you to thrive in the digital age. 
     </p>
     <p>
         Here at Desktech, our instructors are well experienced, well known with proven track records of success stories. Our courses like every other courses, was crafted by our instructors, these courses where crafted from their experiences, making the courses easy to assimilate and relate with.
     </p>
 </section>
 
-<section class="max-w-screen-xl mx-auto px-4 py-11">
+<section class="px-4 pt-20 pb-80 bg-[#F1F1F1]">
+    <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
+        <span class="text-custom-blue">What</span>
+        We Offer
+    </h2>
+    
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+        {% for service in services %}
+            {% include 'components/offer_card.html' with title=service.title description=service.description icon_path=service.icon_path %}
+        {% endfor %}
+
+    </div>
+</section>
+
+
+<section class="max-w-screen-xl mx-auto px-4 py-16">
     <h2 class="text-5xl md:text-6xl text-center max-w-[800px] mx-auto leading-[60px]">
         <span class="text-custom-blue">Why</span>
-        you should <span class="text-custom-blue">study</span> with us at Desktech
+        you should  <span class="text-custom-blue">Use Our</span>
+        Digital Marketing Services
     </h2>
 
      <!-- Cards Grid -->
