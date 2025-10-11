@@ -1578,6 +1578,11 @@ h1, h2, h3, h4, h5{
   width: 5rem;
 }
 
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .max-w-2xl{
   max-width: 42rem;
 }
