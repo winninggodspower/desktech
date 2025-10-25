@@ -9,8 +9,13 @@
 <div class="h-screen">
     <div class="grid md:grid-cols-2 h-full">
         <!-- Left side with image and logo -->
-        <div class="hidden md:block relative">
-            <img src="/placeholder.svg?height=800&width=600" alt="Woman using smartphone" class="object-cover w-full h-full">
+        <div class="hidden md:block relative h-full">
+            <div class="absolute inset-0 bg-dark/30 z-30"></div>
+            <img 
+                src="{% static "images/login-pics.png" %}" 
+                alt="Woman using smartphone" 
+                class="object-cover w-full h-screen"
+            >
             <div class="absolute inset-0 flex items-center justify-center">
                 <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <svg width="465" height="71" viewBox="0 0 465 71" fill="none" xmlns="http://www.w3.org/2000/svg">
